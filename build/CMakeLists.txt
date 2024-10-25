@@ -12,9 +12,7 @@ created by jiancl 10/25/2024
 ]]
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
+set(CMAKE_INSTALL_PREFIX,../release)
 
-file(GLOB SOURCES "*.cpp" "*.h")
-
-add_executable(test ${SOURCES})
-
-message("CMAKE COPLETE SUCCESSFULLY\nVERSION 1.0")
+add_subdirectory(${CMAKE_SOURCE_DIR}../src)
